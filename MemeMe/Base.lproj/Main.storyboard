@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JeQ-Iv-mve">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yX9-nN-mcb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="Cin-cv-f1i">
             <objects>
-                <viewController id="JeQ-Iv-mve" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JeQ-Iv-mve" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CZN-wH-N0I"/>
                         <viewControllerLayoutGuide type="bottom" id="UVf-Mn-ebj"/>
@@ -20,37 +19,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sy4-FU-1Ss">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Sy4-FU-1Ss" secondAttribute="height" multiplier="1:1" id="28m-y6-yYR"/>
-                                </constraints>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sy4-FU-1Ss"/>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccq-G3-5i3">
                                 <items>
-                                    <barButtonItem title="Pick" id="R6S-5T-1Av">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Wus-gs-WzS"/>
+                                    <barButtonItem systemItem="camera" id="6aT-qL-nzD"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Mo-n8-Ywc"/>
+                                    <barButtonItem title="Album" id="R6S-5T-1Av">
                                         <connections>
                                             <action selector="pickImage:" destination="JeQ-Iv-mve" id="yUV-xH-8RX"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vdQ-0j-aou"/>
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Sy4-FU-1Ss" firstAttribute="centerY" secondItem="VNe-2b-LPU" secondAttribute="centerY" multiplier="0.8" id="DBD-i3-17v"/>
-                            <constraint firstItem="Sy4-FU-1Ss" firstAttribute="width" secondItem="VNe-2b-LPU" secondAttribute="width" multiplier="0.8" id="F4s-sd-Xao"/>
+                            <constraint firstItem="Sy4-FU-1Ss" firstAttribute="centerY" secondItem="VNe-2b-LPU" secondAttribute="centerY" id="DBD-i3-17v"/>
+                            <constraint firstItem="Sy4-FU-1Ss" firstAttribute="width" secondItem="VNe-2b-LPU" secondAttribute="width" id="F4s-sd-Xao"/>
                             <constraint firstItem="Sy4-FU-1Ss" firstAttribute="centerX" secondItem="VNe-2b-LPU" secondAttribute="centerX" id="K2j-WW-SsE"/>
+                            <constraint firstItem="Sy4-FU-1Ss" firstAttribute="height" secondItem="VNe-2b-LPU" secondAttribute="height" multiplier="0.7" id="P7X-OA-6Zn"/>
                             <constraint firstItem="ccq-G3-5i3" firstAttribute="width" secondItem="VNe-2b-LPU" secondAttribute="width" id="Wlc-Xp-fGC"/>
                             <constraint firstItem="UVf-Mn-ebj" firstAttribute="top" secondItem="ccq-G3-5i3" secondAttribute="bottom" id="brM-8C-coE"/>
                             <constraint firstItem="ccq-G3-5i3" firstAttribute="centerX" secondItem="VNe-2b-LPU" secondAttribute="centerX" id="k5T-yS-DFi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GWG-1q-zRX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0eH-G8-MUT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Avt-qH-72v"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Sy4-FU-1Ss" id="YQa-13-2wk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6z-bb-jLC" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="588" y="-602"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7jq-GP-y1L">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yX9-nN-mcb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Czu-g6-fPc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JeQ-Iv-mve" kind="relationship" relationship="rootViewController" id="W2C-SS-kj7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arr-gR-l2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="-602.24887556221893"/>
         </scene>
     </scenes>
 </document>
