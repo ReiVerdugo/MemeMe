@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F0C22C21DB2FCBD005C44F4 /* TextfieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0C22C11DB2FCBD005C44F4 /* TextfieldDelegate.swift */; };
 		0F6050731DAF100700F7C9FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6050721DAF100700F7C9FE /* AppDelegate.swift */; };
 		0F6050751DAF100700F7C9FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6050741DAF100700F7C9FE /* ViewController.swift */; };
 		0F6050781DAF100700F7C9FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F6050761DAF100700F7C9FE /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F0C22C11DB2FCBD005C44F4 /* TextfieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldDelegate.swift; sourceTree = "<group>"; };
 		0F60506F1DAF100700F7C9FE /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6050721DAF100700F7C9FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F6050741DAF100700F7C9FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				0F6050721DAF100700F7C9FE /* AppDelegate.swift */,
 				0F6050741DAF100700F7C9FE /* ViewController.swift */,
+				0F0C22C11DB2FCBD005C44F4 /* TextfieldDelegate.swift */,
 				0F6050761DAF100700F7C9FE /* Main.storyboard */,
 				0F6050791DAF100700F7C9FE /* Assets.xcassets */,
 				0F60507B1DAF100700F7C9FE /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F6050751DAF100700F7C9FE /* ViewController.swift in Sources */,
+				0F0C22C21DB2FCBD005C44F4 /* TextfieldDelegate.swift in Sources */,
 				0F6050731DAF100700F7C9FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,7 @@
 				0F6050831DAF100800F7C9FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

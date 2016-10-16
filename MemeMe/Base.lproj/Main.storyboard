@@ -23,7 +23,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccq-G3-5i3">
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Wus-gs-WzS"/>
-                                    <barButtonItem systemItem="camera" id="6aT-qL-nzD"/>
+                                    <barButtonItem systemItem="camera" id="6aT-qL-nzD">
+                                        <connections>
+                                            <action selector="pickPhoto:" destination="JeQ-Iv-mve" id="4TV-pj-LFx"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9Mo-n8-Ywc"/>
                                     <barButtonItem title="Album" id="R6S-5T-1Av">
                                         <connections>
@@ -33,24 +37,48 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="vdQ-0j-aou"/>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Uf-Qb-VPL">
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-Gv-2dH">
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1OJ-Gv-2dH" firstAttribute="centerX" secondItem="VNe-2b-LPU" secondAttribute="centerX" id="719-U5-VKg"/>
+                            <constraint firstItem="2Uf-Qb-VPL" firstAttribute="width" secondItem="Sy4-FU-1Ss" secondAttribute="width" multiplier="0.95" id="8db-4Z-lF0"/>
                             <constraint firstItem="Sy4-FU-1Ss" firstAttribute="centerY" secondItem="VNe-2b-LPU" secondAttribute="centerY" id="DBD-i3-17v"/>
+                            <constraint firstItem="2Uf-Qb-VPL" firstAttribute="centerX" secondItem="VNe-2b-LPU" secondAttribute="centerX" id="Dy6-Zf-AvJ"/>
                             <constraint firstItem="Sy4-FU-1Ss" firstAttribute="width" secondItem="VNe-2b-LPU" secondAttribute="width" id="F4s-sd-Xao"/>
                             <constraint firstItem="Sy4-FU-1Ss" firstAttribute="centerX" secondItem="VNe-2b-LPU" secondAttribute="centerX" id="K2j-WW-SsE"/>
+                            <constraint firstItem="1OJ-Gv-2dH" firstAttribute="centerY" secondItem="VNe-2b-LPU" secondAttribute="centerY" multiplier="1.5" id="O8g-z6-BWd"/>
                             <constraint firstItem="Sy4-FU-1Ss" firstAttribute="height" secondItem="VNe-2b-LPU" secondAttribute="height" multiplier="0.7" id="P7X-OA-6Zn"/>
+                            <constraint firstItem="1OJ-Gv-2dH" firstAttribute="width" secondItem="Sy4-FU-1Ss" secondAttribute="width" multiplier="0.95" id="PA4-bv-MMQ"/>
                             <constraint firstItem="ccq-G3-5i3" firstAttribute="width" secondItem="VNe-2b-LPU" secondAttribute="width" id="Wlc-Xp-fGC"/>
                             <constraint firstItem="UVf-Mn-ebj" firstAttribute="top" secondItem="ccq-G3-5i3" secondAttribute="bottom" id="brM-8C-coE"/>
+                            <constraint firstItem="2Uf-Qb-VPL" firstAttribute="centerY" secondItem="VNe-2b-LPU" secondAttribute="centerY" multiplier="0.5" id="e3p-pn-XZ8"/>
                             <constraint firstItem="ccq-G3-5i3" firstAttribute="centerX" secondItem="VNe-2b-LPU" secondAttribute="centerX" id="k5T-yS-DFi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GWG-1q-zRX">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0eH-G8-MUT"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="0eH-G8-MUT">
+                            <connections>
+                                <action selector="shareAction:" destination="JeQ-Iv-mve" id="keY-FZ-89O"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Avt-qH-72v"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomField" destination="1OJ-Gv-2dH" id="XUK-V9-maU"/>
+                        <outlet property="cameraButton" destination="6aT-qL-nzD" id="N8A-kf-NTy"/>
                         <outlet property="imageView" destination="Sy4-FU-1Ss" id="YQa-13-2wk"/>
+                        <outlet property="toolBar" destination="ccq-G3-5i3" id="gjj-Gb-PHg"/>
+                        <outlet property="topField" destination="2Uf-Qb-VPL" id="Zue-mH-Nv0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6z-bb-jLC" sceneMemberID="firstResponder"/>
