@@ -96,6 +96,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let text =  self.topField.text! + " " + self.bottomField.text!
         let meme = Meme(text: text, image: imageView.image!, memedImage: generateMemedImage())
         dismiss(animated: true, completion: nil)
+        
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func generateMemedImage() -> UIImage {
@@ -116,6 +121,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         toolBar.isHidden = false
         
         return memedImage
+    }
+    
+    
+    @IBAction func cancel(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // Notifications
